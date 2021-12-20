@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) C64",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/x64sc",
+            "args": [
+                "-kernal",
+                "${workspaceFolder}/data/C64/kernal",
+                "-basic",
+                "${workspaceFolder}/data/C64/basic",
+                "-chargen",
+                "${workspaceFolder}/data/C64/chargen"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

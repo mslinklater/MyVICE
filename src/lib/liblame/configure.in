@@ -774,17 +774,17 @@ if test "x$GCC" = "xyes"; then
 			;;
 		esac
 
-		OPTIMIZATION="-O3 ${OMIT_FRAME_POINTER} -ffast-math"
+		OPTIMIZATION="-O0 ${OMIT_FRAME_POINTER} -ffast-math"
 		OPTIMIZATION_FULL="-fmove-all-movables -freduce-all-givs \
 			-fbranch-count-reg -fforce-addr -fforce-mem"
 		;;
 	4.*)
-		OPTIMIZATION="-O3 -fomit-frame-pointer -ffast-math"
+		OPTIMIZATION="-O0 -fomit-frame-pointer -ffast-math"
 		OPTIMIZATION_FULL="-fbranch-count-reg -fforce-addr"
 		;;
 	*)
 		# default
-		OPTIMIZATION="-O3 ${OMIT_FRAME_POINTER} -ffast-math \
+		OPTIMIZATION="-O0 ${OMIT_FRAME_POINTER} -ffast-math \
 			-funroll-loops"
 		OPTIMIZATION_FULL="-fbranch-count-reg -fforce-addr"
 		;;
